@@ -1,6 +1,7 @@
 import type { Serverless } from 'serverless/aws';
 
 const serverlessConfiguration: Serverless = {
+  configValidationMode: 'error',
   service: {
     name: 'santa-elves',
     // app and org for use with dashboard.serverless.com
@@ -14,11 +15,16 @@ const serverlessConfiguration: Serverless = {
       includeModules: true
     }
   },
-  // Add the serverless-webpack plugin
-  plugins: ['serverless-webpack'],
+  plugins: [
+    'serverless-webpack',
+    'serverless-dynamodb-local',
+    'serverless-offline',
+    // 'serverless-secrets'
+  ],
   provider: {
     name: 'aws',
     runtime: 'nodejs12.x',
+    region: '${opt:region, "ap-southeast-2"}',
     apiGateway: {
       minimumCompressionSize: 1024,
     },

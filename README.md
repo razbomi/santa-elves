@@ -23,4 +23,3 @@ Requirements:
 - node
 - nvm
 - npm i -g serverless
-- npm i-g ts-node
