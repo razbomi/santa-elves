@@ -1,6 +1,6 @@
 # Elves
 
-Santa's Elves email campain.
+Santa's little helpers email campaign.
 
 ## Offline Dev
 
