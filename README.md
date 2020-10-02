@@ -5,6 +5,7 @@ Santa's little helpers email campaign.
 ## Offline Dev
 
 `serverless offline start`
+
 `serverless invoke local --function <function-name> --path event.json --watch`
 
 as described here [serverless blog](https://www.serverless.com/plugins/serverless-webpack)
