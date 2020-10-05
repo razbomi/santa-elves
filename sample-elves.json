@@ -1,7 +1,16 @@
 {
-    "name": "Jonny",
-    "gender": "Boy",
-    "answer": "I helped an elderly person",
-    "age": 13,
-    "city": "Sydney"
+    "firstname": "age",
+    "age": 3,
+    "city": "Sydney",
+    "answer": {
+        "label": "nice"
+    },
+    "category": {
+        "labels": [
+            "choice 2",
+            "choice 5"
+        ]
+    },
+    "wish": "new puter",
+    "email": "mrazboynikov@bigw.com"
 }

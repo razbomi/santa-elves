@@ -1,6 +1,7 @@
 # Editor files
 *.swp
 .serverless-secrets.json
+.env
 
 # package directories
 node_modules
