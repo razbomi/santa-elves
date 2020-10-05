@@ -1,6 +1,6 @@
 type Email = string;
-export interface LetterSubscription {
-  email: Email;
+export interface Subscription {
+  email : Email;
   name: string;
   gender: string;
   answer: string;

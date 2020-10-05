@@ -40,6 +40,8 @@
     #         path: 'subscriptions'
     echo:
       handler: src/handler.echo
+    typeformToSubscription:
+      handler: src/handler.typeformToSubscription
   stepFunctions:
     stateMachines:
       start:

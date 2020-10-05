@@ -4,7 +4,7 @@ import {
   APIGatewayProxyResult,
 } from "aws-lambda";
 import "source-map-support/register";
-import { LetterSubscription } from "./subscription";
+import { Subscription } from "./subscription";
 
 function beforeHandler(event: APIGatewayProxyEvent) {
   console.log("before");
@@ -35,8 +35,8 @@ const common = <S, T>(
 export const getSubscriptions = common((event) => {
   return event;
 });
-
-export const postSubscription = common((event: LetterSubscription) => {
+Subscription
+export const postSubscription = common((event: Subscription) => {
   return event;
 });
 
@@ -44,5 +44,18 @@ export const echo = async (event, _context) => {
   console.log(event);
   return new Promise((resolve,_) => {
     resolve(event)
+  });
+};
+
+export const typeformToSubscription = async (event, _context) => {
+  const answers: Subscription = event['form_response']['answers'].map(a => {
+    return [a.field.ref, a[a.type]]
+  }).reduce((a, b) =>{
+    a[b[0]] = b[1]
+    return a
+  }, {});
+
+  return new Promise((resolve,_) => { 
+    resolve(answers)
   });
 };

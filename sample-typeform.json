@@ -1,220 +1,174 @@
 {
-    "event_id": "LtWXD3crgy",
+    "event_id": "01EKVFG176WQQ62T1G56MVVE8P",
     "event_type": "form_response",
     "form_response": {
-        "form_id": "lT4Z3j",
-        "token": "a3a12ec67a1365927098a606107fac15",
-        "submitted_at": "2018-01-18T18:17:02Z",
-        "landed_at": "2018-01-18T18:07:02Z",
-        "calculated": {
-            "score": 9
-        },
-        "definition": {
-            "id": "lT4Z3j",
-            "title": "Webhooks example",
-            "fields": [
-                {
-                    "id": "DlXFaesGBpoF",
-                    "title": "Thanks, {{answer_60906475}}! What's it like where you live? Tell us in a few sentences.",
-                    "type": "long_text",
-                    "ref": "[readable_ref_long_text",
-                    "allow_multiple_selections": false,
-                    "allow_other_choice": false
-                },
-                {
-                    "id": "SMEUb7VJz92Q",
-                    "title": "If you're OK with our city management following up if they have further questions, please give us your email address.",
-                    "type": "email",
-                    "ref": "readable_ref_email",
-                    "allow_multiple_selections": false,
-                    "allow_other_choice": false
-                },
-                {
-                    "id": "JwWggjAKtOkA",
-                    "title": "What is your first name?",
-                    "type": "short_text",
-                    "ref": "readable_ref_short_text",
-                    "allow_multiple_selections": false,
-                    "allow_other_choice": false
-                },
-                {
-                    "id": "KoJxDM3c6x8h",
-                    "title": "When did you move to the place where you live?",
-                    "type": "date",
-                    "ref": "readable_ref_date",
-                    "allow_multiple_selections": false,
-                    "allow_other_choice": false
-                },
-                {
-                    "id": "PNe8ZKBK8C2Q",
-                    "title": "Which pictures do you like? You can choose as many as you like.",
-                    "type": "picture_choice",
-                    "ref": "readable_ref_picture_choice",
-                    "allow_multiple_selections": true,
-                    "allow_other_choice": false
-                },
-                {
-                    "id": "Q7M2XAwY04dW",
-                    "title": "On a scale of 1 to 5, what rating would you give the weather in Sydney? 1 is poor weather, 5 is excellent weather",
-                    "type": "number",
-                    "ref": "readable_ref_number1",
-                    "allow_multiple_selections": false,
-                    "allow_other_choice": false
-                },
-                {
-                    "id": "gFFf3xAkJKsr",
-                    "title": "By submitting this form, you understand and accept that we will share your answers with city management. Your answers will be anonymous will not be shared.",
-                    "type": "legal",
-                    "ref": "readable_ref_legal",
-                    "allow_multiple_selections": false,
-                    "allow_other_choice": false
-                },
-                {
-                    "id": "k6TP9oLGgHjl",
-                    "title": "Which of these cities is your favorite?",
-                    "type": "multiple_choice",
-                    "ref": "readable_ref_multiple_choice",
-                    "allow_multiple_selections": false,
-                    "allow_other_choice": false
-                },
-                {
-                    "id": "RUqkXSeXBXSd",
-                    "title": "Do you have a favorite city we haven't listed?",
-                    "type": "yes_no",
-                    "ref": "readable_ref_yes_no",
-                    "allow_multiple_selections": false,
-                    "allow_other_choice": false
-                },
-                {
-                    "id": "NRsxU591jIW9",
-                    "title": "How important is the weather to your opinion about a city? 1 is not important, 5 is very important.",
-                    "type": "opinion_scale",
-                    "ref": "readable_ref_opinion_scale",
-                    "allow_multiple_selections": false,
-                    "allow_other_choice": false
-                },
-                {
-                    "id": "WOTdC00F8A3h",
-                    "title": "How would you rate the weather where you currently live? 1 is poor weather, 5 is excellent weather.",
-                    "type": "rating",
-                    "ref": "readable_ref_rating",
-                    "allow_multiple_selections": false,
-                    "allow_other_choice": false
-                },
-                {
-                    "id": "pn48RmPazVdM",
-                    "title": "On a scale of 1 to 5, what rating would you give the general quality of life in Sydney? 1 is poor, 5 is excellent",
-                    "type": "number",
-                    "ref": "readable_ref_number2",
-                    "allow_multiple_selections": false,
-                    "allow_other_choice": false
-                }
+      "form_id": "GuDWVJMI",
+      "token": "rksh77aji13vmfsrksh7dxmdy2pdkald",
+      "landed_at": "2020-10-05T04:14:07Z",
+      "submitted_at": "2020-10-05T04:14:43Z",
+      "definition": {
+        "id": "GuDWVJMI",
+        "title": "Wishlist for Santas - BigW v01",
+        "fields": [
+          {
+            "id": "WAgkIf2WoyFf",
+            "title": "Ho ho ho, it’s nearly a whole year since seeing you! \nWhat was your first name again?",
+            "type": "short_text",
+            "ref": "firstname",
+            "properties": {}
+          },
+          {
+            "id": "4ExJQIBJWlQI",
+            "title": "Hello again {{field:firstname}}!\nAnd how old are you this year?",
+            "type": "number",
+            "ref": "36b84a32-c7b3-4341-8994-b3392140530b",
+            "properties": {}
+          },
+          {
+            "id": "BFzlGOx0jXnA",
+            "title": "My my, you're growing up so quickly {{field:firstname}}!\n\nNow...  I just need to find you on my list. Hmmm.\n\nWhat city or town do you live in?",
+            "type": "short_text",
+            "ref": "city",
+            "properties": {}
+          },
+          {
+            "id": "xLRtd7SYbjEq",
+            "title": "Ah! There you are {{field:firstname}} from {{field:city}}.\n\nAnd how have you been behaving this year {{field:firstname}}?",
+            "type": "picture_choice",
+            "ref": "answer",
+            "properties": {},
+            "choices": [
+              {
+                "id": "0wapLBZDhGIj",
+                "label": "naughty"
+              },
+              {
+                "id": "030YERGwQPNl",
+                "label": "nice"
+              }
             ]
-        },
-        "answers": [
-            {
-                "type": "text",
-                "text": "It's cold right now! I live in an older medium-sized city with a university. Geographically, the area is hilly.",
-                "field": {
-                    "id": "DlXFaesGBpoF",
-                    "type": "long_text"
-                }
-            },
-            {
-                "type": "email",
-                "email": "laura@example.com",
-                "field": {
-                    "id": "SMEUb7VJz92Q",
-                    "type": "email"
-                }
-            },
-            {
-                "type": "text",
-                "text": "Laura",
-                "field": {
-                    "id": "JwWggjAKtOkA",
-                    "type": "short_text"
-                }
-            },
-            {
-                "type": "date",
-                "date": "2005-10-15",
-                "field": {
-                    "id": "KoJxDM3c6x8h",
-                    "type": "date"
-                }
-            },
-            {
-                "type": "choices",
-                "choices": {
-                    "labels": [
-                        "London",
-                        "Sydney"
-                    ]
-                },
-                "field": {
-                    "id": "PNe8ZKBK8C2Q",
-                    "type": "picture_choice"
-                }
-            },
-            {
-                "type": "number",
-                "number": 5,
-                "field": {
-                    "id": "Q7M2XAwY04dW",
-                    "type": "number"
-                }
-            },
-            {
-                "type": "boolean",
-                "boolean": true,
-                "field": {
-                    "id": "gFFf3xAkJKsr",
-                    "type": "legal"
-                }
-            },
-            {
-                "type": "choice",
-                "choice": {
-                    "label": "London"
-                },
-                "field": {
-                    "id": "k6TP9oLGgHjl",
-                    "type": "multiple_choice"
-                }
-            },
-            {
-                "type": "boolean",
-                "boolean": false,
-                "field": {
-                    "id": "RUqkXSeXBXSd",
-                    "type": "yes_no"
-                }
-            },
-            {
-                "type": "number",
-                "number": 2,
-                "field": {
-                    "id": "NRsxU591jIW9",
-                    "type": "opinion_scale"
-                }
-            },
-            {
-                "type": "number",
-                "number": 3,
-                "field": {
-                    "id": "WOTdC00F8A3h",
-                    "type": "rating"
-                }
-            },
-            {
-                "type": "number",
-                "number": 4,
-                "field": {
-                    "id": "pn48RmPazVdM",
-                    "type": "number"
-                }
-            }
+          },
+          {
+            "id": "BiR5qOB0fQ31",
+            "title": "Ho ho ho! Glad to hear {{field:firstname}}. I knew you would be.\n\nNow then, which of these do you like the most?",
+            "type": "picture_choice",
+            "allow_multiple_selections": true,
+            "ref": "category",
+            "properties": {},
+            "choices": [
+              {
+                "id": "k0TzQmna6nVq",
+                "label": "choice 1"
+              },
+              {
+                "id": "nPbdDCxxPsB3",
+                "label": "choice 2"
+              },
+              {
+                "id": "Aneo0ZQ8aTsa",
+                "label": "choice 3"
+              },
+              {
+                "id": "y1yq0X6kjheg",
+                "label": "choice 4"
+              },
+              {
+                "id": "FH46o3HJStUk",
+                "label": "choice 5"
+              },
+              {
+                "id": "4SpgPopdNy9A",
+                "label": "choice 6"
+              }
+            ]
+          },
+          {
+            "id": "R3Zals7FULsN",
+            "title": "Ho Ho! The elves will find you something for sure!\n\nIs there a particular present you want?",
+            "type": "short_text",
+            "ref": "wish",
+            "properties": {}
+          },
+          {
+            "id": "Z74qilcAW4TK",
+            "title": "Very well. I've put that on my list beside your name\n \n'{{field:firstname}} from {{field:city}}'.\n\nI'm so glad you let me know!\n\nLast thing I need is an email address, \nthen I can share these wishes with your family!",
+            "type": "email",
+            "ref": "email",
+            "properties": {}
+          }
         ]
+      },
+      "answers": [
+        {
+          "type": "text",
+          "text": "age",
+          "field": {
+            "id": "WAgkIf2WoyFf",
+            "type": "short_text",
+            "ref": "firstname"
+          }
+        },
+        {
+          "type": "number",
+          "number": 3,
+          "field": {
+            "id": "4ExJQIBJWlQI",
+            "type": "number",
+            "ref": "age"
+          }
+        },
+        {
+          "type": "text",
+          "text": "blah",
+          "field": {
+            "id": "BFzlGOx0jXnA",
+            "type": "short_text",
+            "ref": "city"
+          }
+        },
+        {
+          "type": "choice",
+          "choice": {
+            "label": "nice"
+          },
+          "field": {
+            "id": "xLRtd7SYbjEq",
+            "type": "picture_choice",
+            "ref": "answer"
+          }
+        },
+        {
+          "type": "choices",
+          "choices": {
+            "labels": [
+              "choice 2",
+              "choice 5"
+            ]
+          },
+          "field": {
+            "id": "BiR5qOB0fQ31",
+            "type": "picture_choice",
+            "ref": "category"
+          }
+        },
+        {
+          "type": "text",
+          "text": "new puter",
+          "field": {
+            "id": "R3Zals7FULsN",
+            "type": "short_text",
+            "ref": "wish"
+          }
+        },
+        {
+          "type": "email",
+          "email": "age@test.com",
+          "field": {
+            "id": "Z74qilcAW4TK",
+            "type": "email",
+            "ref": "email"
+          }
+        }
+      ]
     }
-}
+  }
