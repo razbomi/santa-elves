@@ -1,0 +1,77 @@
+  configValidationMode: error
+  service:
+    name: santa-elves
+    # // app and org for use with dashboard.serverless.com
+    # // app: your-app-name
+    # // org: your-org-name
+  # frameworkVersion: '2'
+  custom:
+    webpack:
+      webpackConfig: './webpack.config.js'
+      includeModules: true
+  plugins:
+    - serverless-webpack
+    - serverless-step-functions
+    # - // serverless-pseudo-parameters
+    # - // serverless-dynamodb-local
+    # - serverless-offline-step-functions
+    - serverless-offline
+    # - // serverless-secret
+  provider:
+    name: aws
+    runtime: nodejs12.x
+    region: '${opt:region, "ap-southeast-2"}'
+    apiGateway:
+      minimumCompressionSize: 1024
+    environment:
+      AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
+  functions:
+    # getSubscriptions:
+    #   handler: 'src/handler.getSubscriptions'
+    #   events:
+    #     - http:
+    #         method: 'get'
+    #         path: 'subscriptions'
+    # postSubscription:
+    #   handler: 'src/handler.postSubscription'
+    #   events:
+    #     - http:
+    #         method: 'post'
+    #         path: 'subscriptions'
+    echo:
+      handler: src/handler.echo
+  stepFunctions:
+    stateMachines:
+      start:
+        events:
+          - http:
+              method: 'post'
+              path: 'echo'        
+        definition:
+          Comment: 'A Hello World example of the Amazon States Language using an AWS Lambda Function'
+          StartAt: Translate
+          States:
+            Translate:
+              Type: Task
+              Resource: 
+                Fn::GetAtt: [echo, Arn]
+              Next: WaitConfirm
+            WaitConfirm:
+              Type: Wait
+              Seconds: 30
+              Next: Confirmation
+            Confirmation:
+              Type: Task
+              Resource:
+                Fn::GetAtt: [echo, Arn]
+              Next: WaitRemind
+            WaitRemind:
+              Type: Wait
+              Timestamp: 2020-10-05T03:25:00Z
+              Next: Reminder
+            Reminder:
+              Type: Task
+              Resource:
+                Fn::GetAtt: [echo, Arn]
+              End: true 
+            
